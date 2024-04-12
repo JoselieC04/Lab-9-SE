@@ -8,6 +8,13 @@ def encoder(password):
         encode += encoded_digit
     return encode
 
+def decoder(password):
+    encode = ""
+    for digit in password:
+        decode_digit = str((int(digit) - 3) % 10)
+        encode += decode_digit
+    return encode
+
 
 while True:
     # program start up menu
